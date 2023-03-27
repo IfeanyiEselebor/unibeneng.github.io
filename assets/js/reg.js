@@ -13,6 +13,7 @@ $(document).ready(function () {
                 $('#load_btn').removeAttr('disabled');
             } else if (data == "6") {
                 alert("Incorrect Password For this Matriculation Number");
+                $("#pswSearch").val("");
                 $('#load_btn').removeAttr('disabled');
             } else if (data == "4") {
                 sessionStorage.setItem("mat_no", mat_no);
