@@ -1,0 +1,32 @@
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+.pass-icon {
+  float: right;
+  margin-top: -28px;
+  z-index: 5;
+  font-size: 20px;
+}
+
+.eye-icon {
+  float: right;
+  margin-top: -35px;
+  z-index: 5;
+  font-size: 25px;
+}
+
+td {
+  border-left: 1px solid #413F3F;
+  border-top: 1px solid #dee2e6;
+}
+
+tr:last-child {
+  border-bottom: 1px solid #413F3F;
+}
+
+.container {
+  padding: 16px;
+}
+

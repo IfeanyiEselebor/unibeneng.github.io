@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>uniben</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 border border-primary px-3 mb-5 mt-3">
+                <form id="reg_form" class="ml-5 mb-3 mr-5 mt-5 px-3">
+                    <h1>Online Course Registration<br></h1>
+                    <h4>Carefully fill the form below then preview before submission!<br></h4><br>
+                    <div class="col-md-6"><label class="form-label"><strong>MAT. NO.</strong><br></label><input class="bg-light form-control" type="text" id="matno" placeholder="ENG.." autofocus="" required=""></div><br>
+                    <div><label class="form-label"><strong>SURNAME* (in capital letters e.g ADAMU)</strong><br></label><input class="bg-light form-control" type="text" id="students_surname" placeholder="SURNAME" required=""></div>
+                    <div class="row">
+                        <div class="col"><label class="form-label"><strong>Firstname * (e.g Smith)</strong><br></label><input class="bg-light form-control" type="text" id="students_firstname" placeholder="Firstname" required=""></div>
+                        <div class="col"><label class="form-label"><strong>Othernames (e.g Sadiku)</strong><br></label><input class="bg-light form-control" type="text" id="students_othernames" placeholder="Othernames" required=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><label class="form-label">Dept ID (eg 1 for CPE)<br></label><select class="bg-light form-select" id="dept_id" required="">
+                                <option value="1. Computer Engineering" selected="">1. Computer Engineering</option>
+                                <option value="5. Agricultural Engineering">5. Agricultural Engineering</option>
+                                <option value="6. Chemical Engineering">6. Chemical Engineering</option>
+                                <option value="18. Civil Engineering">18. Civil Engineering</option>
+                                <option value="8. Electrical/Electronics Engineering">8. Electrical/Electronics Engineering</option>
+                                <option value="9. Industrial Engineering">9. Industrial Engineering</option>
+                                <option value="10. Marine Engineering">10. Marine Engineering</option>
+                                <option value="11. Material and Metrolog Engineering">11. Material and Metrolog Engineering</option>
+                                <option value="12. Mechanical Engineering">12. Mechanical Engineering</option>
+                                <option value="13. Mechatronics Engineering">13. Mechatronics Engineering</option>
+                                <option value="14. Metallurgical and Material Engineering">14. Metallurgical and Material Engineering</option>
+                                <option value="15. Petroleum Engineering">15. Petroleum Engineering</option>
+                                <option value="16. Production Engineering">16. Production Engineering</option>
+                                <option value="17. Structural Engineering">17. Structural Engineering</option>
+                                <option value="19. Geomatics">19. Geomatics</option>
+                                <option value="20. Vocational and Technical Education">20. Vocational and Technical Education</option>
+                                <option value="2. Diploma in Computing and Computer Technology">2. Diploma in Computing and Computer Technology</option>
+                                <option value="3. Diploma In  Marine Drilling And Production Technology">3. Diploma In Marine Drilling And Production Technology</option>
+                                <option value="4. Diploma In  Maritime Studies, Information &amp; Communication Technology">4. Diploma In Maritime Studies, Information &amp; Communication Technology</option>
+                                <option value="0. Generic Department">0. Generic Department</option>
+                            </select></div>
+                        <div class="col-md-3"><label class="form-label">Session<br></label><select class="bg-light form-select" id="session" required="">
+                                <option value="2020/2021">2020/2021</option>
+                                <option value="2021/2022" selected="">2021/2022</option>
+                                <option value="2022/2023">2022/2023</option>
+                                <option value="2023/2024">2023/2024</option>
+                                <option value="2024/2025">2024/2025</option>
+                                <option value="2025/2026">2025/2026</option>
+                                <option value="2026/2027">2026/2027</option>
+                            </select></div>
+                        <div class="col-md-3"><label class="form-label">Level</label><select class="bg-light form-select" id="level" required="">
+                                <option value="100" selected="">100</option>
+                                <option value="200">200</option>
+                                <option value="300">300</option>
+                                <option value="400">400</option>
+                                <option value="500">500</option>
+                            </select></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><label class="form-label">Year of Entry (e.g 2019)<br></label><select class="bg-light form-select" id="year_of_entry" required="">
+                                <option value="2012" selected="">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2032">2024</option>
+                            </select></div>
+                        <div class="col-md-4"><label class="form-label">Session of Entry<br></label><select class="bg-light form-select" id="session_of_entry" required="">
+                                <option value="2012/2013" selected="">2012/2013</option>
+                                <option value="2013/2014">2013/2014</option>
+                                <option value="2014/2015">2014/2015</option>
+                                <option value="2015/2016">2015/2016</option>
+                                <option value="2016/2017">2016/2017</option>
+                                <option value="2017/2018">2017/2018</option>
+                                <option value="2018/2019">2018/2019</option>
+                                <option value="2019/2020">2019/2020</option>
+                                <option value="2020/2021">2020/2021</option>
+                                <option value="2021/2022">2021/2022</option>
+                                <option value="2022/2023">2022/2023</option>
+                                <option value="2023/2024">2023/2024</option>
+                                <option value="2024/2025">2024/2025</option>
+                            </select></div>
+                        <div class="col-md-4"><label class="form-label">Mode of Entry (UME or DE)<br></label><select class="bg-light form-select" id="mode_of_entry" required="">
+                                <option value="UME" selected="">UME</option>
+                                <option value="DE">DE</option>
+                                <option value="TRANSFER">TRANSFER</option>
+                            </select></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><label class="form-label"><strong>Password</strong><br></label><input class="bg-light form-control" type="password" id="pwd" placeholder="Enter Password" required=""><span id="toggle_pwd" class="fa fa-fw fa-eye-slash pass-icon"></span></div>
+                        <div class="col-md-6"><label class="form-label"><strong>Repeat Password</strong><br></label><input class="bg-light form-control" type="password" id="conpwd" placeholder="Repeat Password" required=""><span id="toggle_pwd-1" class="fa fa-fw fa-eye-slash pass-icon"></span></div>
+                    </div>
+                    <hr>
+                    <h2>Bio Data<br></h2>
+                    <div><label class="form-label"><strong>Date of birth</strong><br></label><input class="bg-light form-control" id="dob" type="date" required=""></div>
+                    <div class="row">
+                        <div class="col-md-6"><label class="form-label"><strong>Email</strong></label><input class="bg-light form-control" type="email" id="students_email" placeholder="Email" inputmode="email" required=""></div>
+                        <div class="col-md-6"><label class="form-label"><strong>PHONE</strong></label><input class="bg-light form-control" type="tel" id="students_phone" placeholder="Phone" inputmode="tel" required=""></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><label class="form-label"><strong>Gender</strong></label><select class="bg-light form-select" id="gender" required="">
+                                <option value="male" selected="">Male</option>
+                                <option value="female">Female</option>
+                            </select></div>
+                        <div class="col-md-3"><label class="form-label"><strong>FEES</strong></label><select class="bg-light form-select" id="fees" required="">
+                                <option value="paid">Paid</option>
+                                <option value="unpaid">Unpaid</option>
+                            </select></div>
+                        <div class="col"><label class="form-label"><strong>STATUS</strong></label><select class="bg-light form-select" id="status" required="">
+                                <option value="Successful">Successful</option>
+                                <option value="Probation">Probation</option>
+                                <option value="Carry Over">Carry Over</option>
+                                <option value="Transfer">Transfer</option>
+                            </select></div>
+                    </div>
+                    <h5 class="mt-1">Upload recent passport size Photo (Must be on red background; Max size 1024kb)<br></h5>
+                    <div class="row">
+                        <div class="col"><img id="preview" src="assets/img/profile-default.png" width="140" height="160"></div>
+                        <div class="col-md-9 d-xl-flex align-items-xl-end"><input class="form-control" type="file" id="passport_input" accept="image/*" onchange="showPreview(event, this);" required=""></div>
+                    </div>
+                    <hr>
+                    <h2>Add/Remove Courses<br></h2>
+                    <div class="row mt-1">
+                        <div class="col"><label class="form-label"><strong>First Semester Courses</strong><br></label><input class="bg-light border rounded-0 form-control form-control-lg" type="text" id="all_first_courses" readonly="" value="" required=""></div>
+                        <div class="col"><label class="form-label"><strong>Second Semester Courses</strong><br></label><input class="bg-light border rounded-0 form-control form-control-lg" type="text" id="all_second_courses" readonly="" value="" required=""></div>
+                    </div><div class="row mt-3">
+    <div class="col">
+        <input type="hidden" name="first_credit_total" id="first_credit_total">
+        <input type="hidden" name="second_credit_total" id="second_credit_total">
+        <input type="hidden" name="Total_credit_unit" id="Total_credit_unit">
+        <div class="input-group"><select id="first_semester_course" class="form-select">
+            <option value="AGE411">AGE411-Irrigation and Drainage Principles (2)</option>
+            <option value="AGE518">AGE518-Rural Water Supply and Sanitation (2)</option>
+            <option value="AGE544">AGE544-Water Quality, Epidemiology and Environmental Chem (2)</option>
+            <option value="AGE546">AGE546-Natural and Environmental Resources Management (2)</option>
+            <option value="AGE548">AGE548-Engineering Quantities (2)</option>
+            <option value="AGE552">AGE552-Public Health Engineering (2)</option>
+            <option value="AGE301">AGE301-Farm Management, Rural Sociology and Agricultural (2)</option>
+            <option value="AGE303">AGE303-Land Surveying, Map Reading and Photogrammetry (2)</option>
+            <option value="AGE309">AGE309-Agricultural and Environmental Engineering Laborat (2)</option>
+            <option value="AGE311">AGE311-Forestry and Wood Products Engineering (2)</option>
+            <option value="AGE313">AGE313-Nursery and Greenhouse Engineering (2)</option>
+            <option value="AGE401">AGE401-Advanced Agricultural and Environment (2)</option>
+            <option value="AGE403">AGE403-Experimental Design and Analysis in Engineering Re (2)</option>
+            <option value="AGE413">AGE413-Farm Structures and Environmental Control (2)</option>
+            <option value="AGE421">AGE421-Farm Power and Machinery (3)</option>
+            <option value="AGE431">AGE431-Properties, Handling, Processing and Storage (2)</option>
+            <option value="AGE505">AGE505-Automotive Service and Maintenance (2)</option>
+            <option value="AGE507">AGE507-Agricultural Wastes Management Systems (2)</option>
+            <option value="AGE509">AGE509-Biological Engineering (2)</option>
+            <option value="AGE510">AGE510-Agricultural Land Drainage (2)</option>
+            <option value="AGE511">AGE511-Soil and Water Conservation Engineering (2)</option>
+            <option value="AGE512">AGE512-Irrigation Systems (2)</option>
+            <option value="AGE514">AGE514-Advanced Hydraulics (3)</option>
+            <option value="AGE516">AGE516-Design of Irrigation and Soil Conservation Structu (3)</option>
+            <option value="AGE521">AGE521-Land Clearing and Development (2)</option>
+            <option value="AGE523">AGE523-Agricultural Mechanization (2)</option>
+            <option value="AGE531">AGE531-Farm Electrification (2)</option>
+            <option value="AGE533">AGE533-Design and Construction of Farm Structures (3)</option>
+            <option value="AGE597">AGE597-Project I (3)</option>
+            <option value="CED300">CED300-Entrepreneurial Development (2)</option>
+            <option value="CHE341 ">CHE341 -Industrial Process Calculations (3)</option>
+            <option value="CPE301">CPE301-Computer Laboratory (2)</option>
+            <option value="CPE311">CPE311-Circuit Theory 1 (3)</option>
+            <option value="CPE313">CPE313-Measurement and Instrumentation (2)</option>
+            <option value="CPE331">CPE331-Electric Machines (2)</option>
+            <option value="CPE351">CPE351-Communication Principles (2)</option>
+            <option value="CPE371">CPE371-Digital System Design (2)</option>
+            <option value="CPE375">CPE375-Computer Organization and Architecture (3)</option>
+            <option value="CPE381">CPE381-Engineering Mathematics III (3)</option>
+            <option value="CPE391">CPE391-Analogue Circuits (2)</option>
+            <option value="CPE401">CPE401-Computer Laboratory (2)</option>
+            <option value="CPE433">CPE433-Data Communication and Network (3)</option>
+            <option value="CPE451">CPE451-Control System (3)</option>
+            <option value="CPE453">CPE453-Microprocessor System and Interfacing (3)</option>
+            <option value="CPE457">CPE457-Assembly Language Programming (2)</option>
+            <option value="CPE461">CPE461-Software Engineering II (2)</option>
+            <option value="CPE475">CPE475-Computer Organization and Architecture II (2)</option>
+            <option value="CPE479">CPE479-Prototyping Techniques (2)</option>
+            <option value="CPE481">CPE481-Numerical Computation and Statistics (3)</option>
+            <option value="CPE501">CPE501-Project and Thesis (3)</option>
+            <option value="CPE504">CPE504-Engineering Law (2)</option>
+            <option value="CPE505">CPE505-Engineering Law (2)</option>
+            <option value="CPE513">CPE513-Cyperpreneurship and Cyber Law (2)</option>
+            <option value="CPE515">CPE515-Computer Security Techniques I (3)</option>
+            <option value="CPE571">CPE571-Digital Computer Networks (3)</option>
+            <option value="CPE573">CPE573-Artificial Neural Networks (3)</option>
+            <option value="CPE575">CPE575-Microprogramming (3)</option>
+            <option value="CPE591">CPE591-Reliability and Maintainability (3)</option>
+            <option value="CVE211">CVE211-Strength of Materials I (3)</option>
+            <option value="CVE311">CVE311-Theory of Structures &amp; Strength of Materials II (3)</option>
+            <option value="CVE313">CVE313-Elements of Architecture (3)</option>
+            <option value="CVE341">CVE341-Engineering Geology (3)</option>
+            <option value="CVE411">CVE411-Structural Mechanics II (2)</option>
+            <option value="CVE413">CVE413-Design of Structure II (2)</option>
+            <option value="CVE415">CVE415-Technical Communication and Computer-aided Design (2)</option>
+            <option value="CVE421">CVE421-Hydraulics and Hydrology (2)</option>
+            <option value="CVE423">CVE423-Environmental Engineering (2)</option>
+            <option value="CVE431">CVE431-Introduction to Transportation Engineering (3)</option>
+            <option value="CVE441">CVE441-Soil Mechanics II (2)</option>
+            <option value="CVE451">CVE451-Engineering Surveying &amp; Geoinformatics II (3)</option>
+            <option value="CVE471">CVE471-Civil Engineering Practice &amp; Law (3)</option>
+            <option value="CVE481">CVE481-Applied Engineering Mathematics (3)</option>
+            <option value="CVE500">CVE500-Project (6)</option>
+            <option value="CVE501">CVE501-Project (3)</option>
+            <option value="CVE511">CVE511-Structural Mechanics III (2)</option>
+            <option value="CVE513">CVE513-Design of Structures III (2)</option>
+            <option value="CVE515">CVE515-Advanced Structural Mechanics (3)</option>
+            <option value="CVE521">CVE521-Civil Engineering Hydraulics (2)</option>
+            <option value="CVE523">CVE523-Engineering Hydrology I (2)</option>
+            <option value="CVE525">CVE525-Water Resources and Environmental Engineering I (3)</option>
+            <option value="CVE531">CVE531-Highway Design (3)</option>
+            <option value="CVE535">CVE535-Traffic Management, Planning and Highway Economics (3)</option>
+            <option value="CVE541">CVE541-Geotechnical Engineering (2)</option>
+            <option value="CVE545">CVE545-Special Topics in Geotechnical Engineering (3)</option>
+            <option value="CVE565">CVE565-Building Technology I (3)</option>
+            <option value="CVE567">CVE567-Building and Civil Engineering Measurement and eva (3)</option>
+            <option value="CVE581">CVE581-Laboratory and Design Studio IV (2)</option>
+            <option value="ECE341">ECE341-Engineering Geology (3)</option>
+            <option value="ECP281">ECP281-Engineering Computer Programming (2)</option>
+            <option value="EEE211">EEE211-Electrical Engineering I (3)</option>
+            <option value="EEE211 ">EEE211 -Electrical Engineering I (3)</option>
+            <option value="EEE311">EEE311-Electrical Theory I (3)</option>
+            <option value="EEE313">EEE313-Electrical/Electronics (2)</option>
+            <option value="EEE317">EEE317-Electrical Engineering III (3)</option>
+            <option value="EEE331">EEE331-Basic Power Machines (2)</option>
+            <option value="EEE371">EEE371-Logical Design and Switching Theory (3)</option>
+            <option value="EEE375">EEE375-Computer Architecture Organization (3)</option>
+            <option value="EEE431">EEE431-Electrical Machines (3)</option>
+            <option value="EEE433">EEE433-Energy Generation, Distribution and Utilization (3)</option>
+            <option value="EEE451">EEE451-Control Theory (3)</option>
+            <option value="EEE453">EEE453-Instrumentation (3)</option>
+            <option value="EEE471">EEE471-Electronic Circuits I (3)</option>
+            <option value="EEE473">EEE473-Telecommunication Principles I (3)</option>
+            <option value="EEE500">EEE500-Project (6)</option>
+            <option value="EEE501">EEE501-Project (3)</option>
+            <option value="EEE531">EEE531-Energy Transmission (3)</option>
+            <option value="EEE533">EEE533-Power Systems I (3)</option>
+            <option value="EEE571">EEE571-Electronic Circuit II (3)</option>
+            <option value="EEE573">EEE573-Telecommunications Principles (3)</option>
+            <option value="EEE590">EEE590-Professional Knowledge in Elect. Eng (0)</option>
+            <option value="EEE591">EEE591-Maintenance and Reliability (3)</option>
+            <option value="ELA201">ELA201-Laboratory I (2)</option>
+            <option value="ELA301">ELA301-Laboratory III (2)</option>
+            <option value="ELA301">ELA301-Engineering Laboratory &amp; Workshop Practice (2)</option>
+            <option value="ELA401">ELA401-Laboratory/Workshop Practice (2)</option>
+            <option value="EMA281">EMA281-Engineering Mathematics I (2)</option>
+            <option value="EMA281 ">EMA281 -Engineering Mathematics I (2)</option>
+            <option value="EMA381">EMA381-Engineering Mathematics III (3)</option>
+            <option value="EMA481">EMA481-Engineering Mathematics V (3)</option>
+            <option value="ENS211">ENS211-Engineer in Society (2)</option>
+            <option value="GST111">GST111-Use of English I (2)</option>
+            <option value="GST112">GST112-Philosophy and Logic (2)</option>
+            <option value="IDE 531">IDE 531-Work Study and System Design (2)</option>
+            <option value="IDE321">IDE321-Engineering Statistics I (2)</option>
+            <option value="IDE331">IDE331-Introduction to Industrial Engineering (3)</option>
+            <option value="IDE341">IDE341-Engineering Economics I (3)</option>
+            <option value="IDE371">IDE371-Project Planning and Control (3)</option>
+            <option value="IDE381">IDE381-Introduction to Systems Engineering (3)</option>
+            <option value="IDE401">IDE401-Industrial Engineering Laboratory (2)</option>
+            <option value="IDE411">IDE411-Mathematical Methods in Industrial Engineering (3)</option>
+            <option value="IDE421">IDE421-Research Methodology and Technical Communication (2)</option>
+            <option value="IDE431">IDE431-Production Management (3)</option>
+            <option value="IDE441">IDE441-Engineering Accounting (2)</option>
+            <option value="IDE451">IDE451-Facility Planning and Layout (2)</option>
+            <option value="IDE461">IDE461-Introduction to Decision Theory and Stochastic Pro (3)</option>
+            <option value="IDE473">IDE473-Human Factors Engineering (3)</option>
+            <option value="IDE481">IDE481-Quality Engineering Management (2)</option>
+            <option value="IDE501">IDE501-Project (3)</option>
+            <option value="IDE511">IDE511-Scheduling and Inventory Control (3)</option>
+            <option value="IDE521">IDE521-Logistics and Supply Chain Management (3)</option>
+            <option value="IDE541">IDE541-Special Topics in Industrial Engineering I (3)</option>
+            <option value="IDE551">IDE551-Computer Applications in Industrial Engineering an (2)</option>
+            <option value="IDE561">IDE561-Principles of Operations Research I (3)</option>
+            <option value="IDE563">IDE563-Forecasting Techniques (2)</option>
+            <option value="IDE573">IDE573-Safety Engineering (2)</option>
+            <option value="MEE211">MEE211-Engineering Mechanics I (3)</option>
+            <option value="MEE221">MEE221-Engineering Drawing I (3)</option>
+            <option value="MEE311">MEE311-Mechanics of Machines I (3)</option>
+            <option value="MEE311">MEE311-Mechanics of Machines I (3)</option>
+            <option value="MEE321">MEE321-Engineering Drawing III (3)</option>
+            <option value="MEE321">MEE321-Engineering Drawing III (3)</option>
+            <option value="MEE351">MEE351-Thermodynamics I (2)</option>
+            <option value="MEE351 ">MEE351 -Thermodynamics I (2)</option>
+            <option value="MEE361">MEE361-Fluid Mechanics I (2)</option>
+            <option value="MEE361 ">MEE361 -Fluid Mechanics I (2)</option>
+            <option value="MEE411 ">MEE411 -Mechanical Vibrations (3)</option>
+            <option value="MEE411">MEE411-Mechanics of Machines III (3)</option>
+            <option value="MEE421">MEE421-Engineering Design (3)</option>
+            <option value="MEE431">MEE431-Strength of Materials II (2)</option>
+            <option value="MEE441">MEE441-Metallurgy (2)</option>
+            <option value="MEE441">MEE441-Metallurgy I (2)</option>
+            <option value="MEE451">MEE451-Thermodynamics III (2)</option>
+            <option value="MEE461">MEE461-Fluid Mechanics III (3)</option>
+            <option value="MEE471">MEE471-Heat Transfer (2)</option>
+            <option value="MEE471 ">MEE471 -Heat Transfer (2)</option>
+            <option value="MEE501">MEE501-Project (3)</option>
+            <option value="MEE505">MEE505-Computer Applications in Mechanical Engineering (2)</option>
+            <option value="MEE511">MEE511-Systems Dynamics I (3)</option>
+            <option value="MEE521">MEE521-Design of Machine Elements (3)</option>
+            <option value="MEE531">MEE531-Stress Analysis I (Optional) (3)</option>
+            <option value="MEE541">MEE541-Metallurgy II (optional) (3)</option>
+            <option value="MEE551">MEE551-Thermal Power Engineering I (2)</option>
+            <option value="MEE561">MEE561-Fluid Mechanics IV (Optional) (3)</option>
+            <option value="MEE571">MEE571-Heat Transfer II (2)</option>
+            <option value="MEE581">MEE581-ENGINEERING MAINTENANCE AND RELIABILITY I (3)</option>
+            <option value="MEE591">MEE591-Building Service Engineering I (Optional) (3)</option>
+            <option value="MME311">MME311-Properties of Materials (3)</option>
+            <option value="MME321">MME321-Physical Metallurgy I (3)</option>
+            <option value="MME411 ">MME411 -Material Testing &amp;Experimental Techniques (2)</option>
+            <option value="MME421">MME421-Physical Metallurgy II (3)</option>
+            <option value="MME431">MME431-Deformation &amp; Fracture Mechanics (2)</option>
+            <option value="MME441">MME441-Technical Report Writing &amp; Communication (2)</option>
+            <option value="MME451">MME451-Chemical Metallurgy (2)</option>
+            <option value="MME461">MME461-Electrochemistry &amp; Corrosion (3)</option>
+            <option value="MME471">MME471-Heat &amp; Mass Transfer (2)</option>
+            <option value="MME501">MME501-Project (3)</option>
+            <option value="MME505">MME505-Computer Aided Design (CAD) (2)</option>
+            <option value="MME511">MME511-Iron Steel Technology (2)</option>
+            <option value="MME521">MME521-Composite Materials (2)</option>
+            <option value="MME531">MME531-Engineering Plasticity (2)</option>
+            <option value="MME541">MME541-Introduction to Nanotechnology (2)</option>
+            <option value="MME551">MME551-Metallurgical Process &amp; Plant Design (2)</option>
+            <option value="MME561">MME561-Production Metallurgy (Optional) (3)</option>
+            <option value="MME571">MME571-Functional Materials (Optional) (3)</option>
+            <option value="MME581">MME581-Nuclear Materials (Optional) (3)</option>
+            <option value="MRE321">MRE321-Naval Architecture I (2)</option>
+            <option value="MRE321 ">MRE321 -Naval Architecture I (2)</option>
+            <option value="MRE351">MRE351-Introduction to Marine Engine Technologies (2)</option>
+            <option value="MRE351 ">MRE351 -Introduction to Marine Engine Technologies (2)</option>
+            <option value="MRE381">MRE381-Technical Report Writing and Communication (1)</option>
+            <option value="MRE381 ">MRE381 -Technical Report Writing and Communication (1)</option>
+            <option value="MRE411">MRE411-Ship Design I (3)</option>
+            <option value="MRE411 ">MRE411 -Ship Design I (3)</option>
+            <option value="MRE421">MRE421-Naval Architecture II (2)</option>
+            <option value="MRE421 ">MRE421 -Naval Architecture II (2)</option>
+            <option value="MRE431">MRE431-Ship Structures and Strength (3)</option>
+            <option value="MRE431 ">MRE431 -Ship Structures and Strength (3)</option>
+            <option value="MRE461">MRE461-Marine Auxiliary Machinery (2)</option>
+            <option value="MRE461 ">MRE461 -Marine Auxiliary Machinery (2)</option>
+            <option value="MRE471">MRE471-Shipyard Technology I (2)</option>
+            <option value="MRE471 ">MRE471 -Shipyard Technology I (2)</option>
+            <option value="MRE501">MRE501-Project (3)</option>
+            <option value="MRE501 ">MRE501 -Project (3)</option>
+            <option value="MRE511">MRE511-Ship Design II (3)</option>
+            <option value="MRE511 ">MRE511 -Ship Design II (3)</option>
+            <option value="MRE521">MRE521-Naval Architecture III (2)</option>
+            <option value="MRE521 ">MRE521 -Naval Architecture III (2)</option>
+            <option value="MRE531 ">MRE531 -Running and Maintenance of Ship Power Plants (2)</option>
+            <option value="MRE551 ">MRE551 -Marine Diesel Engine (3)</option>
+            <option value="MRE561 ">MRE561 -Ship Propulsion (2)</option>
+            <option value="MRE571 ">MRE571 -Marine Operations (3)</option>
+            <option value="MTE301 ">MTE301 -Mechatronic Laboratory I (2)</option>
+            <option value="MTE311 ">MTE311 -Electrical Circuit Theory (3)</option>
+            <option value="MTE321 ">MTE321 -Signals &amp; Systems (2)</option>
+            <option value="MTE341 ">MTE341 -Computer Software Engineering I (2)</option>
+            <option value="MTE381 ">MTE381 -Technical Writing &amp; Presentation (1)</option>
+            <option value="MTE401 ">MTE401 -CAD/CAM/CNC Laboratory (2)</option>
+            <option value="MTE411 ">MTE411 -Measurement &amp; Instrumentation (2)</option>
+            <option value="MTE421 ">MTE421 -Electronics II (3)</option>
+            <option value="MTE431 ">MTE431 -Control Engineering I (3)</option>
+            <option value="MTE441 ">MTE441 -Digital Systems &amp; PLCs (3)</option>
+            <option value="MTE451 ">MTE451 -Computer Aided Manufacturing (2)</option>
+            <option value="MTE461 ">MTE461 -Sensors &amp; Actuators (2)</option>
+            <option value="MTE491 ">MTE491 -Group Project (2)</option>
+            <option value="MTE501 ">MTE501 -Final Year Project (3)</option>
+            <option value="MTE511 ">MTE511 -Microcomputers &amp; Microprocessor Systems (3)</option>
+            <option value="MTE521 ">MTE521 -Digital Signal Modelling (3)</option>
+            <option value="MTE531 ">MTE531 -Control Engineering II (2)</option>
+            <option value="MTE541 ">MTE541 -Computer Software II (2)</option>
+            <option value="MTE551 ">MTE551 -Introduction to Robotics (2)</option>
+            <option value="MTE561 ">MTE561 -Vibrations (2)</option>
+            <option value="MTE573 ">MTE573 -Micro-Fabrication Technology (2)</option>
+            <option value="MTE574 ">MTE574 -Computer Aided Product Modelling (2)</option>
+            <option value="MTE575 ">MTE575 -Machine Vision (2)</option>
+            <option value="MTE576 ">MTE576 -Lean Product Mgt. &amp; Ind. Logistics (2)</option>
+            <option value="MTH110">MTH110-Algebra &amp; Trigonometry (3)</option>
+            <option value="MTH112">MTH112-Calculus (3)</option>
+            <option value="PEE211">PEE211-Basic Petroleum Engineering (2)</option>
+            <option value="PEE281">PEE281-Engineering Computer Programming (2)</option>
+            <option value="PEE311">PEE311-Basic Petroleum Engineering (3)</option>
+            <option value="PEE331">PEE331-Well Testing and Analysis (2)</option>
+            <option value="PEE343">PEE343-Engineering Geology (3)</option>
+            <option value="PEE355">PEE355-Drilling Fluid Systems and Engineering (2)</option>
+            <option value="PEE401">PEE401-Laboratory V (2)</option>
+            <option value="PEE411">PEE411-Quality Health Safety and Environment Studies (2)</option>
+            <option value="PEE431">PEE431-Wall Test Analysis (2)</option>
+            <option value="PEE441">PEE441-Drilling Technology II (3)</option>
+            <option value="PEE451">PEE451-Well Logging (3)</option>
+            <option value="PEE461">PEE461-Reservoir Engineering I (3)</option>
+            <option value="PEE471">PEE471-Oil and Gas Production Technology I (3)</option>
+            <option value="PEE500">PEE500-Project (6)</option>
+            <option value="PEE501">PEE501-Project (3)</option>
+            <option value="PEE531">PEE531-Oil Field Development I (3)</option>
+            <option value="PEE561">PEE561-Reservoir Engineering II (3)</option>
+            <option value="PEE571">PEE571-Oil and Gas Production Tech. II (3)</option>
+            <option value="PEE581">PEE581-Natural gas Engineering (3)</option>
+            <option value="PEE591">PEE591-Numerical Methods (3)</option>
+            <option value="PHY111">PHY111-Mechanics, Thermal Physics &amp; Properties of Matter (3)</option>
+            <option value="PHY113">PHY113-Vibration, Wave &amp; Optics (3)</option>
+            <option value="PRE211">PRE211-Manufacturing Technology I (2)</option>
+            <option value="PRE311">PRE311-Manufacturing Technology III (2)</option>
+            <option value="PRE321">PRE321-Production Technology I (3)</option>
+            <option value="PRE401">PRE401-Production Laboratory (2)</option>
+            <option value="PRE411">PRE411-Mathematical &amp; Methods in Prod Eng. (3)</option>
+            <option value="PRE421">PRE421-Production Technology II (3)</option>
+            <option value="PRE431">PRE431-Design of Machine Elements II (3)</option>
+            <option value="PRE441">PRE441-Machine Tool Technology I (3)</option>
+            <option value="PRE451">PRE451-Metrology (3)</option>
+            <option value="PRE461">PRE461-Introduction to Industrial Engineering (3)</option>
+            <option value="PRE473">PRE473-Human Factors Engineering/Fact. Layout I (3)</option>
+            <option value="PRE500">PRE500-Project (6)</option>
+            <option value="PRE501">PRE501-Project (3)</option>
+            <option value="PRE521">PRE521-Production Management I (3)</option>
+            <option value="PRE531">PRE531-Design and Production (3)</option>
+            <option value="PRE541">PRE541-Machine Tool Technology II (2)</option>
+            <option value="PRE551">PRE551-Computer Applications in Production Engineering (2)</option>
+            <option value="PRE561">PRE561-Principles of Operations Research (2)</option>
+            <option value="PRE571">PRE571-Engineering Economics and Administration I (3)</option>
+            <option value="PRE573">PRE573-Human Factors Engineering &amp; Factor Layout II (2)</option>
+            <option value="PRE581">PRE581-Automation and Control (3)</option>
+            <option value="PRE581">PRE581-Automation and Control I (3)</option>
+            <option value="PRE591">PRE591-Machine Tool Technology (3)</option>
+            <option value="STE311">STE311-Construction Technology (2)</option>
+            <option value="STE313">STE313-Elements of Architecture (2)</option>
+            <option value="STE411">STE411-Structural and Solid Mechanics I (2)</option>
+            <option value="STE413">STE413-Design of Concrete and other Structurals I (2)</option>
+            <option value="STE415">STE415-Constructing Technology III (2)</option>
+            <option value="STE417">STE417-Service Engineering I (2)</option>
+            <option value="STE425">STE425-Building Construction Materials (2)</option>
+            <option value="STE501">STE501-First Year Project (3)</option>
+            <option value="STE511">STE511-Structural and Solid Mechanics II (2)</option>
+            <option value="STE513">STE513-Design of Concrete and Other Structures II (2)</option>
+            <option value="STE515">STE515-Construction Management and Technology (3)</option>
+            <option value="STE517">STE517-Building and Civil Engineering Measurement and Eva (2)</option>
+            <option value="STE531">STE531-BRIDGE STRUCTURES AND TECHNOLOGY (3)</option>
+            <option value="STE533">STE533-AIRCRAFT STRUCTURES AND TECHNOLOGY (3)</option>
+            <option value="STE535">STE535-TIMBER STRUCTURES AND TECHNOLOGY (3)</option>
+            <option value="CCT011">CCT011-CCT011 (3)</option>
+            <option value="CCT013">CCT013-CCT013 (3)</option>
+            <option value="CCT015">CCT015-CCT015 (3)</option>
+            <option value="CCT021">CCT021-CCT021 (2)</option>
+            <option value="CCT023">CCT023-CCT023 (3)</option>
+            <option value="CCT025">CCT025-CCT025 (2)</option>
+            <option value="CCT027">CCT027-CCT027 (3)</option>
+            <option value="CCT029">CCT029-CCT029 (3)</option>
+            <option value="CHE211">CHE211-Chemistry for Engineers (2)</option>
+            <option value="CHE301">CHE301-Chemical Engineering Laboratory I (2)</option>
+            <option value="CHE311">CHE311-Chemical Engineering Thermodynamics I (2)</option>
+            <option value="CHE321">CHE321-Biochemical Engineering I (3)</option>
+            <option value="CHE331">CHE331-Technical Writing and Communication (2)</option>
+            <option value="CHE341">CHE341-Industrial Process Calculations (3)</option>
+            <option value="CHE351">CHE351-Polymer Engineering I (3)</option>
+            <option value="CHE361">CHE361-Fluid Flow for Chemical Engineers (3)</option>
+            <option value="CHE411">CHE411-Chemical Engineering Thermodynamics II (2)</option>
+            <option value="CHE421">CHE421-Chemical Engineering Analysis I (3)</option>
+            <option value="CHE431">CHE431-Process Design I (3)</option>
+            <option value="CHE441">CHE441-Petroleum Refinery Processes (3)</option>
+            <option value="CHE451">CHE451-Seperation Processes I (3)</option>
+            <option value="CHE461">CHE461-Separation Processes II (3)</option>
+            <option value="CHE471">CHE471-Chemical Reaction Engineering II (2)</option>
+            <option value="CHE481">CHE481-Computer Application in Chemical Engineering II (2)</option>
+            <option value="CHE500">CHE500-Project (3)</option>
+            <option value="CHE511">CHE511-Process Dynamics, Optimization and Control I (2)</option>
+            <option value="CHE521">CHE521-Chemical Engineering Analysis II (2)</option>
+            <option value="CHE531">CHE531-Process Design II (3)</option>
+            <option value="CHE541">CHE541-Separation Process III (2)</option>
+            <option value="CHE561">CHE561-Chemical Reaction Engineering III (2)</option>
+            <option value="CHE571">CHE571-Biochemical Engineering II (3)</option>
+            <option value="CHE581">CHE581-Chemical Process Industries (3)</option>
+            <option value="CHE591">CHE591-Polymer Engineering II (3)</option>
+            <option value="CHM111">CHM111-Inorganic Chemistry I (3)</option>
+            <option value="CHM113">CHM113-Organic Chemistry I (3)</option>
+            <option value="CPE300">CPE300-Computer Lab (3)</option>
+            <option value="CPE311">CPE311-Electrical Theory I (3)</option>
+            <option value="CPE313">CPE313-Electrical/Electronic Measurement (2)</option>
+            <option value="CPE321">CPE321-Commercial Programming Language (2)</option>
+            <option value="CPE371">CPE371-Logic Design and Switching Theory (3)</option>
+            <option value="CPE375">CPE375-Computer Architecture and Organization I (3)</option>
+            <option value="CPE377">CPE377-Micro-Computer Tech I (3)</option>
+            <option value="CPE423">CPE423-Operating System/Principles (3)</option>
+            <option value="CPE451">CPE451-Control Theory (3)</option>
+            <option value="CPE457">CPE457-Assembly Language Programming (3)</option>
+            <option value="CPE471">CPE471-Instrumentation/Electronic Circuits (2)</option>
+            <option value="CPE473">CPE473-Telecoms Principles (3)</option>
+            <option value="CPE475">CPE475-Computer Architecture &amp; Organization II (3)</option>
+            <option value="CPE477">CPE477-Semiconductor Material Technology (3)</option>
+            <option value="CPE481">CPE481-Numerical Computer (3)</option>
+            <option value="CPE500">CPE500-Project (6)</option>
+            <option value="CPE501">CPE501-Project (3)</option>
+            <option value="CPE553">CPE553-Microcomputer Technology (3)</option>
+            <option value="CPE557">CPE557-Engineering Law (2)</option>
+            <option value="CPE593">CPE593-Artificial Neural Networks (3)</option>
+            </select><button id="first_semester_add" class="btn btn-outline-success" type="button">Add</button></div><br />
+    </div>
+    <div class="col">
+        <div class="input-group"><select id="second_semester_course" class="form-select">
+            <option value="AGE504">AGE504-Industrial Studies (2)</option>
+            <option value="AGE508">AGE508-Power and Machinery Systems (2)</option>
+            <option value="AGE520">AGE520-Foundation Engineering (2)</option>
+            <option value="AGE522">AGE522-Agricultural Power Systems (3)</option>
+            <option value="AGE526">AGE526-Farm Transportation (2)</option>
+            <option value="AGE528">AGE528-Operations and Management of Farm Power and Machin (2)</option>
+            <option value="AGE530">AGE530-Processing and Storage of Agricultural Materials (2)</option>
+            <option value="AGE532">AGE532-Engineering Properties and Handling of Agricultura (2)</option>
+            <option value="AGE534">AGE534-Advanced Thermodynamics (Heat and Mass Transfer) (3)</option>
+            <option value="AGE536">AGE536-Solar Energy Applications for Processing and Stora (2)</option>
+            <option value="AGE538">AGE538-Food and Process Engineering (2)</option>
+            <option value="AGE540">AGE540-Agricultural Machinery (3)</option>
+            <option value="AGE542">AGE542-Mechanics of Deformable Bodies (2)</option>
+            <option value="AGE554">AGE554-Safety, Health and Ergonomics (2)</option>
+            <option value="AGE556">AGE556-Industrial Waste Engineering (2)</option>
+            <option value="AGE558">AGE558-Unit Operations and Processes in Environmental Des (2)</option>
+            <option value="AGE560">AGE560-Design of Structures for Biomaterials Storage and (3)</option>
+            <option value="AGE562">AGE562-Applied Biotechnology and Waste Handling Systems (2)</option>
+            <option value="AGE564">AGE564-Environmental Systems Management in Agricultural E (2)</option>
+            <option value="AGE566">AGE566-Structures and Environment (2)</option>
+            <option value="AGE568">AGE568-Silviculture (2)</option>
+            <option value="AGE570">AGE570-Solid Waste Engineering and Air Pollution (2)</option>
+            <option value="AGE572      ">AGE572 -Measurements and Instrumentation (2)</option>
+            <option value="AGE574">AGE574-Electrical Installations and Services Design (3)</option>
+            <option value="AGE576">AGE576-Telecommunication Engineering and Services Design (3)</option>
+            <option value="AGE578">AGE578-Electrical Power Generation, Transmission and Dist (2)</option>
+            <option value="AGE580">AGE580-Control and Power Systems Engineering (2)</option>
+            <option value="AGE582">AGE582-Analogue and Digital Computers (2)</option>
+            <option value="AGE584">AGE584-Micro-Computer Hardware and Software Techniques (2)</option>
+            <option value="AGE586">AGE586-Information and Electrical Technologies (2)</option>
+            <option value="AGE202">AGE202-Agricultural Engineering Concept (2)</option>
+            <option value="AGE302">AGE302-Basic Agricultural and Bio-resources Engineering (2)</option>
+            <option value="AGE304">AGE304-Machine Component Design and Drawing (2)</option>
+            <option value="AGE306">AGE306-Aquaculture Engineering (2)</option>
+            <option value="AGE308">AGE308-Crop Production for Engineers (2)</option>
+            <option value="AGE312">AGE312-Animal Production for Engineers (2)</option>
+            <option value="AGE314">AGE314-Agricultural and Environmental Engineering Laborat (2)</option>
+            <option value="AGE316">AGE316-Renewable Energy and Conservation Strategies (2)</option>
+            <option value="AGE502">AGE502-Environmental Engineering (2)</option>
+            <option value="AGE506">AGE506-Professional Engineering Practice (2)</option>
+            <option value="AGE550">AGE550-Environmental Impact Assessment (2)</option>
+            <option value="AGE598">AGE598-Project II (3)</option>
+            <option value="CPE272">CPE272-Computer Engineering II (2)</option>
+            <option value="CPE302">CPE302-Computer Laboratory (2)</option>
+            <option value="CPE304">CPE304-Engineering Communication (1)</option>
+            <option value="CPE312">CPE312-Circuit Theory II (3)</option>
+            <option value="CPE314">CPE314-Electromagnetic Fields and waves (3)</option>
+            <option value="CPE321">CPE321-Programming Languages II (2)</option>
+            <option value="CPE322">CPE322-Programming Languages II (2)</option>
+            <option value="CPE324">CPE324-Operating System (2)</option>
+            <option value="CPE344">CPE344-Engineering Communication (1)</option>
+            <option value="CPE362">CPE362-Software Engineering 1 (3)</option>
+            <option value="CPE372">CPE372-Digital Electronic Circuit (3)</option>
+            <option value="CPE378">CPE378-Software Engineering 1 (3)</option>
+            <option value="CPE382">CPE382-Engineering Mathematics IV (3)</option>
+            <option value="CPE399">CPE399-SIWES II (2)</option>
+            <option value="CPE499">CPE499-SIWESIII (6)</option>
+            <option value="CPE502">CPE502-Project (3)</option>
+            <option value="CPE512">CPE512-Digital Signal Processing (3)</option>
+            <option value="CPE514">CPE514-Design and Installation of Electrical and ICT Serv (2)</option>
+            <option value="CPE522">CPE522-Digital System Design with VHDL (3)</option>
+            <option value="CPE524">CPE524-Fuzzy Logic &amp; Programming (2)</option>
+            <option value="CPE526">CPE526-Robotics and Automation (2)</option>
+            <option value="CPE534">CPE534-Digital Image Processing (2)</option>
+            <option value="CPE544">CPE544-Digial Image Processing (2)</option>
+            <option value="CPE554">CPE554-Cryptography Principles and Applications (2)</option>
+            <option value="CPE556">CPE556-Computer Graphics (3)</option>
+            <option value="CVE212">CVE212-Element of Architecture I (3)</option>
+            <option value="CVE312">CVE312-Civil Engineering Materials (3)</option>
+            <option value="CVE314">CVE314-Structural Mechanics I (2)</option>
+            <option value="CVE316">CVE316-Design of Structures I (3)</option>
+            <option value="CVE342">CVE342-Engineering Geology II (2)</option>
+            <option value="CVE344">CVE344-Soil Mechanics I (2)</option>
+            <option value="CVE352">CVE352-Engineering Surveying and Geoinformatics I (3)</option>
+            <option value="CVE502">CVE502-Project (3)</option>
+            <option value="CVE512">CVE512-Structural Mechanics IV (2)</option>
+            <option value="CVE514">CVE514-Design of Structure IV (2)</option>
+            <option value="CVE516">CVE516-Advance Structural Engineering II (3)</option>
+            <option value="CVE522">CVE522-Engineering Hydrology II (2)</option>
+            <option value="CVE526">CVE526-Water Resources and Environmental Engineering II (3)</option>
+            <option value="CVE536">CVE536-Advance Pavement Design and Construction (3)</option>
+            <option value="CVE542">CVE542-Geotechnical Engineering II (2)</option>
+            <option value="CVE546">CVE546-Special Topics in Geotechnical Engineering (3)</option>
+            <option value="CVE566">CVE566-Building Technology II (3)</option>
+            <option value="ECP576">ECP576-Micro Technology (3)</option>
+            <option value="EEE212">EEE212-Electrical Engineering II (3)</option>
+            <option value="EEE272">EEE272-Introduction to Computer Engineering (2)</option>
+            <option value="EEE312">EEE312-Electrical Theory II (3)</option>
+            <option value="EEE314">EEE314-Electromagnetic Theory (3)</option>
+            <option value="EEE316">EEE316-Electrical Properties of Materials (2)</option>
+            <option value="EEE318">EEE318-Electrical Engineering IV (2)</option>
+            <option value="EEE332">EEE332-Electrical Machines I (3)</option>
+            <option value="EEE372">EEE372-Electronic Devices &amp; Circuits (3)</option>
+            <option value="EEE376">EEE376-Logic Design &amp; Dig. CKTS (3)</option>
+            <option value="EEE502">EEE502-Project (3)</option>
+            <option value="EEE516">EEE516-Electrical Service Design (3)</option>
+            <option value="EEE522">EEE522-High Voltage Engineering (3)</option>
+            <option value="EEE524">EEE524-Power Systems Design (3)</option>
+            <option value="EEE532">EEE532-Special Topics in Elect. Machine (3)</option>
+            <option value="EEE534">EEE534-Electrical Machine Design (3)</option>
+            <option value="EEE536">EEE536-Power Systems II (3)</option>
+            <option value="EEE538">EEE538-Electric Drives and Traction (3)</option>
+            <option value="EEE552">EEE552-Solid State Electronics (3)</option>
+            <option value="EEE562">EEE562-Digital communication (3)</option>
+            <option value="EEE572">EEE572-Digital Computers and Systems (3)</option>
+            <option value="EEE574">EEE574-Telecommunication Systems (3)</option>
+            <option value="EEE576">EEE576-Microwave Engineering (3)</option>
+            <option value="EEE578">EEE578-Solid State Electronics &amp; Devices (3)</option>
+            <option value="ELA202">ELA202-Laboratory II (2)</option>
+            <option value="ELA302">ELA302-Engineering Laboratory &amp; Workshop Practice (2)</option>
+            <option value="ELA302">ELA302-Laboratory IV (2)</option>
+            <option value="EMA282">EMA282-Engineering Mathematics II (4)</option>
+            <option value="EMA382">EMA382-Engineering Mathematics IV (4)</option>
+            <option value="GST121">GST121-Use of English II (2)</option>
+            <option value="GST122">GST122-Nigerian Peoples and Culture (2)</option>
+            <option value="GST123">GST123-History and Philosophy of Science (2)</option>
+            <option value="IDE222">IDE222-Introduction to Industrial Engineering Techniques (2)</option>
+            <option value="IDE342">IDE342-Engineering Economics II (3)</option>
+            <option value="IDE372">IDE372-Introduction to computer graphics &amp; drafting (2)</option>
+            <option value="IDE392">IDE392-Engineering Statistics II (3)</option>
+            <option value="IDE502">IDE502-Project (3)</option>
+            <option value="IDE512">IDE512-Design and Analysis of Industrial Experiments (2)</option>
+            <option value="IDE522">IDE522-Engineering Law and Management (3)</option>
+            <option value="IDE532">IDE532-Introduction to Simulation and Modeling (2)</option>
+            <option value="IDE542">IDE542-Special Topics in Industrial Engineering II (2)</option>
+            <option value="IDE552">IDE552-Introduction to Reliability and Maintenance (2)</option>
+            <option value="IDE562">IDE562-Principles of Operations ResearchII (3)</option>
+            <option value="IDE564">IDE564-Technology Policy and Entrepreneurship (2)</option>
+            <option value="IDE572">IDE572-Metrology (2)</option>
+            <option value="MEE212">MEE212-Engineering Mechanics II (3)</option>
+            <option value="MEE222">MEE222-Engineering Drawing II (3)</option>
+            <option value="MEE312">MEE312-Mechanics of Machine II (3)</option>
+            <option value="MEE312">MEE312-Mechanics of Machines II (3)</option>
+            <option value="MEE312 ">MEE312 -Mechanics of Machines II (3)</option>
+            <option value="MEE322">MEE322-Creative Problem Solving (3)</option>
+            <option value="MEE332">MEE332-Strength of Materials III (2)</option>
+            <option value="MEE332 ">MEE332 -Strength of Materials (2)</option>
+            <option value="MEE342">MEE342-Materials Science &amp; Production Processes (2)</option>
+            <option value="MEE342 ">MEE342 -Engineering Metallurgy (2)</option>
+            <option value="MEE352">MEE352-Engineering Thermodynamics II (2)</option>
+            <option value="MEE362">MEE362-Fluid Mechanics II (2)</option>
+            <option value="MEE362 ">MEE362 -Fluid Mechanics II (2)</option>
+            <option value="MEE372">MEE372-Computer Auto Graphics (1)</option>
+            <option value="MEE372">MEE372-Computer Graphics (2)</option>
+            <option value="MEE502">MEE502-Project (3)</option>
+            <option value="MEE506">MEE506-Mechanical Engineering in Industry (2)</option>
+            <option value="MEE512">MEE512-Systems Dynamics II (3)</option>
+            <option value="MEE522">MEE522-Machine Design (3)</option>
+            <option value="MEE532">MEE532-Advance Strength of Materials (Optional) (3)</option>
+            <option value="MEE542">MEE542-Metallurgy III (Optional) (3)</option>
+            <option value="MEE552">MEE552-Thermal Power Engineering II (2)</option>
+            <option value="MEE562">MEE562-Fluid Mechanics V (Optional) (3)</option>
+            <option value="MEE572 ">MEE572 -Refrigeration and Air-Conditioning (2)</option>
+            <option value="MEE572">MEE572-Refrigeration and Air-conditioning (2)</option>
+            <option value="MEE582">MEE582-ENGINEERING MAINTENANCE AND RELIABILITY II (3)</option>
+            <option value="MEE592">MEE592-Building Service Engineering II (Optional) (3)</option>
+            <option value="MME222">MME222-Material Science (3)</option>
+            <option value="MME312 ">MME312 -Fuels, Furnances &amp; Refractories (2)</option>
+            <option value="MME322 ">MME322 -Polymeric Materials (2)</option>
+            <option value="MME332 ">MME332 -Mineral Processing Technology (2)</option>
+            <option value="MME342">MME342-Crystallography (2)</option>
+            <option value="MME352">MME352-Metallurgical Thermodynamics (2)</option>
+            <option value="MME362">MME362-Joining &amp; Welding Technology (2)</option>
+            <option value="MME372">MME372-Solidification &amp; Foundry Technology (2)</option>
+            <option value="MME382">MME382-Biomaterials (2)</option>
+            <option value="MME502">MME502-Project (3)</option>
+            <option value="MME506">MME506-Materials &amp; Metallurgical Engineering in Industry (2)</option>
+            <option value="MME512">MME512-Non-ferrous Extractive Metallurgy (2)</option>
+            <option value="MME522">MME522-Powder Metallurgy, Ceramics &amp; Glasses (2)</option>
+            <option value="MME532">MME532-Mechanics of Metal Forming (2)</option>
+            <option value="MME542">MME542-Transport Phenomena in Materials Processing (3)</option>
+            <option value="MME552">MME552-Failure Analysis &amp; Material Selection (3)</option>
+            <option value="MME562">MME562-Corrosion Management &amp; Control (3)</option>
+            <option value="MME572">MME572-Foundry Technology II (3)</option>
+            <option value="MME582">MME582-Rheology (3)</option>
+            <option value="MRE212">MRE212-Maritime Engineering Practice (2)</option>
+            <option value="MRE212 ">MRE212 -Marine Engineering Practice (2)</option>
+            <option value="MRE322">MRE322-Metrology (2)</option>
+            <option value="MRE322 ">MRE322 -Metrology (2)</option>
+            <option value="MRE332">MRE332-Electrical Machines I (3)</option>
+            <option value="MRE332 ">MRE332 -Electrical Machines I (3)</option>
+            <option value="MRE352">MRE352-Marine Steam and Gas Turbines (2)</option>
+            <option value="MRE352 ">MRE352 -Marine Steam and Gas Turbines (2)</option>
+            <option value="MRE372">MRE372-Navigation and Meteorology (2)</option>
+            <option value="MRE372 ">MRE372 -Navigation and Meteorology (2)</option>
+            <option value="MRE502 ">MRE502 -Project (3)</option>
+            <option value="MRE512 ">MRE512 -Ship design and Construction (3)</option>
+            <option value="MRE522 ">MRE522 -Shipyard Technology II (2)</option>
+            <option value="MRE532 ">MRE532 -Offshore Structures (2)</option>
+            <option value="MRE552 ">MRE552 -Ship Engines and Power Plants (3)</option>
+            <option value="MRE562 ">MRE562 -Ship Automation (2)</option>
+            <option value="MTE292 ">MTE292 -Introduction to Mechatronics Engineering (2)</option>
+            <option value="MTE302 ">MTE302 -Mechatronic Laboratory II (2)</option>
+            <option value="MTE312 ">MTE312 -Electromagnetic Theory (3)</option>
+            <option value="MTE322 ">MTE322 -Electronics I (2)</option>
+            <option value="MTE332 ">MTE332 -Computer Hardware Engineering (3)</option>
+            <option value="MTE342 ">MTE342 -Electromechanical Devices (3)</option>
+            <option value="MTE352 ">MTE352 -Materials Technology (2)</option>
+            <option value="MTE362 ">MTE362 -Mechanical Engineering Design (3)</option>
+            <option value="MTE372 ">MTE372 -Heat &amp; Mass Transfer (2)</option>
+            <option value="MTE502 ">MTE502 -Final Year Project (3)</option>
+            <option value="MTE512 ">MTE512 -Power Electronics &amp; Drives (3)</option>
+            <option value="MTE522 ">MTE522 -Systems Modelling &amp; Simulation (3)</option>
+            <option value="MTE552 ">MTE552 -Automation &amp; Robotics (3)</option>
+            <option value="MTE572 ">MTE572 -Process Automation (2)</option>
+            <option value="MTE582 ">MTE582 -MEMS &amp; VLSI (3)</option>
+            <option value="MTE583 ">MTE583 -Microcontroller &amp; Embedded Systems (2)</option>
+            <option value="MTE584 ">MTE584 -Control Engineering III (2)</option>
+            <option value="MTE585 ">MTE585 -Mobile Robotics (2)</option>
+            <option value="MTE586 ">MTE586 -Renewable Energy Resources (2)</option>
+            <option value="MTE592 ">MTE592 -Automation Laboratory (2)</option>
+            <option value="MTH123">MTH123-Vectors, Geometry &amp; Statistics (3)</option>
+            <option value="MTH125">MTH125-Differential Equations &amp; Dynamics (3)</option>
+            <option value="PEE212">PEE212-Drilling Technology I (2)</option>
+            <option value="PEE322">PEE322-Petroleum Geology (3)</option>
+            <option value="PEE332">PEE332-Computer Application in Petroleum Engineering (3)</option>
+            <option value="PEE342">PEE342-Drilling Technology I (3)</option>
+            <option value="PEE344">PEE344-Reservoir Geomechanics (2)</option>
+            <option value="PEE358">PEE358-Formation Evaluation (3)</option>
+            <option value="PEE502">PEE502-Project (3)</option>
+            <option value="PEE532">PEE532-Oil Field Development II (3)</option>
+            <option value="PEE562">PEE562-Reservoir Engineering III (3)</option>
+            <option value="PEE572">PEE572-Oil and Gas Production Technology III (3)</option>
+            <option value="PEE582">PEE582-Natural Gas Processing (3)</option>
+            <option value="PEE592">PEE592-Elements of Reservoir Simulation (3)</option>
+            <option value="PEE593">PEE593-Enhanced Oil Recovery Processes (3)</option>
+            <option value="PHY109">PHY109-Practical Physics (2)</option>
+            <option value="PHY124">PHY124-Electromagnetism &amp; Modern Physics (4)</option>
+            <option value="PRE212">PRE212-Manufacturing Technology II (2)</option>
+            <option value="PRE222">PRE222-Introduction to Computer Graphics &amp; Drafting (2)</option>
+            <option value="PRE314">PRE314-Industrial Engineering Statistics (2)</option>
+            <option value="PRE322">PRE322-Applied Material Science (2)</option>
+            <option value="PRE322">PRE322-Applied Material Science (2)</option>
+            <option value="PRE332">PRE332-Design Of Machine Elements I (3)</option>
+            <option value="PRE332">PRE332-Design of Machine Elements &amp; Material Selection I (3)</option>
+            <option value="PRE502">PRE502-Project (3)</option>
+            <option value="PRE522">PRE522-Production Management II (3)</option>
+            <option value="PRE532">PRE532-Tool Design (including jigs &amp; fixtures) (3)</option>
+            <option value="PRE562">PRE562-Operations Research II (2)</option>
+            <option value="PRE564">PRE564-Technology Policy &amp; Entrepreneurship (2)</option>
+            <option value="PRE572">PRE572-Engineering Economic and Administration II (3)</option>
+            <option value="PRE582">PRE582-Automatic and Control II (3)</option>
+            <option value="PRE592">PRE592-Plastic Working of Metals (2)</option>
+            <option value="PRE592">PRE592-Plastic Working of Metals (3)</option>
+            <option value="STE312">STE312-Construction Technology II (2)</option>
+            <option value="STE502">STE502-PROJECT (3)</option>
+            <option value="STE512">STE512-STRUCTURAL AND SOLID MECHANICS III (2)</option>
+            <option value="STE514">STE514-DESIGN OF REINFORCED CONCRETE AND OTHER STRUCTURES (2)</option>
+            <option value="STE516">STE516-SERVICES ENGINEERING (2)</option>
+            <option value="STE518">STE518-ACOUSTICS AND MECHANICAL SERVICES IN BUILDING (2)</option>
+            <option value="STE532">STE532-STRUCTURES IN MANSONRY AND OTHER LOCAL MATERIALS (3)</option>
+            <option value="STE534">STE534-OFFSHORE STRUCTURES AND TECHNOLOGY (3)</option>
+            <option value="STE536">STE536-STEEL STRUCTURES AND TECHNOLOGY (3)</option>
+            <option value="UBT400 ">UBT400 -SIWES (6)</option>
+            <option value="UBT400">UBT400-Industrial Training (6)</option>
+            <option value="CCT012">CCT012-CCT012 (2)</option>
+            <option value="CCT014">CCT014-CCT014 (2)</option>
+            <option value="CCT016">CCT016-CCT016 (3)</option>
+            <option value="CCT018">CCT018-CCT018 (3)</option>
+            <option value="CCT030">CCT030-CCT030 (2)</option>
+            <option value="CCT032">CCT032-CCT032 (3)</option>
+            <option value="CCT034">CCT034-CCT034 (3)</option>
+            <option value="CCT036">CCT036-CCT036 (2)</option>
+            <option value="CCT038">CCT038-CCT038 (2)</option>
+            <option value="CCT040">CCT040-CCT040 (3)</option>
+            <option value="CCT042">CCT042-CCT042 (2)</option>
+            <option value="CCT200">CCT200-CCT200 (2)</option>
+            <option value="CHE212">CHE212-Chemistry for Engineer (2)</option>
+            <option value="CHE222">CHE222-Materials Science (3)</option>
+            <option value="CHE312">CHE312-Computer Application in Chemical Engineering I (2)</option>
+            <option value="CHE322">CHE322-Process Instrumentation and Control (3)</option>
+            <option value="CHE332">CHE332-Chemical Reaction Engineering I (3)</option>
+            <option value="CHE352">CHE352-Heat Transfer (3)</option>
+            <option value="CHE362">CHE362-Mass Transfer (3)</option>
+            <option value="CHE372">CHE372-Particle Technology (3)</option>
+            <option value="CHE401">CHE401-Chemical Engineering Laboratory II (2)</option>
+            <option value="CHE500">CHE500-Project (3)</option>
+            <option value="CHE512">CHE512-Process Dynamics, Optimization and Control II (2)</option>
+            <option value="CHE522">CHE522-Loss Prevention and Industrial Safety (3)</option>
+            <option value="CHE532">CHE532-Process Design III (3)</option>
+            <option value="CHE542">CHE542-Corrosion Engineering (3)</option>
+            <option value="CHE552">CHE552- Reservoir Engineering (3)</option>
+            <option value="CHE562">CHE562-Chemical Reaction Engineering IV (3)</option>
+            <option value="CHM122">CHM122-Inorganic Chemistry II (3)</option>
+            <option value="CHM124">CHM124-Organic Chemistry II (3)</option>
+            <option value="CPE312">CPE312-Electrical Theory II (3)</option>
+            <option value="CPE314">CPE314-Electromagnetic Theory (3)</option>
+            <option value="CPE316">CPE316-Properties of Semiconductor Materials (3)</option>
+            <option value="CPE322">CPE322-High Level Programming (3)</option>
+            <option value="CPE372">CPE372-Digital Electronics Circuits (3)</option>
+            <option value="CPE376">CPE376-Basic Computer Engineering (3)</option>
+            <option value="CPE378">CPE378-Microprocessor and Micro-computer (3)</option>
+            <option value="CPE502">CPE502-Project (3)</option>
+            <option value="CPE512">CPE512-Digital Design Processing (3)</option>
+            <option value="CPE522">CPE522-System Programming (3)</option>
+            <option value="CPE534">CPE534-Commercial Programming Languages (3)</option>
+            <option value="CPE552">CPE552-Control Engineering (3)</option>
+            <option value="CPE554">CPE554-Data Communications (3)</option>
+            <option value="CPE556">CPE556-Computer Graphics (3)</option>
+            <option value="PHY109">PHY109-Physics Practical (0)</option>
+            <option value="CPE572">CPE572-Digital Computer Network (3)</option>
+            <option value="CPE516">CPE516-Computer Security Techniques (3)</option>
+            </select><button id="second_semester_add" class="btn btn-outline-success" type="button">Add</button></div><br />
+    </div>
+</div>
+                    <div class="row">
+                        <div class="col" id="first_semester_list"></div>
+                        <div class="col" id="second_semester_list"></div>
+                    </div>
+                    <p class="mt-2" style="font-size: 21px;">Cross check the entries you made on the form before you submit<br></p><a href="https://unibeneng.github.io/regulations.pdf" style="font-size: 21px;text-decoration: none;" target="_blank">Dowload Examination Regulation PDF</a>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1" style="font-size: 20px;" required=""><label class="form-check-label" for="formCheck-1" style="font-size: 20px;">I have downloaded and read the Examination Regulation<br></label></div>
+                    <div class="row mt-1">
+                        <div class="col text-center"><button class="btn btn-success btn-lg btn-block" id="submit_btn" type="submit">Preview before Submitting<br></button></div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+
+</html>

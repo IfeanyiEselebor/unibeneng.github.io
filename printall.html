@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>uniben</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container .bg-primary">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 border border-primary ml-3 mb-3 mr-3">
+                <div>
+                    <h2 class="text-center">UNIVERSITY OF BENIN, BENIN CITY<br></h2>
+                    <h4 class="text-center">FACULTY OF ENGINEERING<br></h4>
+                    <h5 class="text-center">EXAMINATION COURSE REGISTRATION FORM 2021/2022 SESSION<br></h5>
+                </div>
+                <div style="float: right;"><img id="image_show" class="rounded mx-auto d-block" width="150" height="150" src="assets/img/profile-default.png"></div><div>
+    <table class="table" border="1">
+        <tbody>
+          <tr>
+            <td>MAT. NO.</td>
+            <td id="td_matno"></td>
+          </tr>
+          <tr>
+            <td>SURNAME</td>
+            <td id="td_surname"></td>
+          </tr>
+          <tr>
+            <td>FIRST NAME</td>
+            <td id="td_firstname"></td>
+          </tr>
+          <tr>
+            <td>OTHER NAMES</td>
+            <td id="td_othernames"></td>
+          </tr>
+          <tr>
+            <td>DEPARTMENT</td>
+            <td id="td_department"></td>
+          </tr>
+          <tr>
+            <td>MODE OF ENTRY</td>
+            <td id="td_mode"></td>
+          </tr>
+          <tr>
+            <td>LEVEL</td>
+            <td id="td_level"></td>
+          </tr>
+          <tr>
+            <td>Session</td>
+            <td id="td_session"></td>
+          </tr>
+          <tr>
+            <td>PHONE NO.</td>
+            <td id="td_phone"></td>
+          </tr>
+          <tr>
+            <td>GENDER</td>
+            <td id="td_gender"></td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+<h5 class="text-center">REGISTER CARRY OVER COURSES FIRST</h5>
+<table class="table" border="1" id="table_courses">
+    <tr>
+      <td>FIRST SEMESTER</td>
+      <td>SECOND SEMESTER</td>
+    </tr>
+    <tr>
+        <td><pre id="td_courses1"></pre></td>
+        <td><pre id="td_courses2"></pre></td>
+    </tr>
+    <tr>
+      <td id ="td_total1"></td>
+      <td id ="td_total2"></td>
+    </tr>
+</table>
+
+<div id="previewButtons">
+    <button class="btn btn-primary btn-lg btn-block"  type="button" id="btnEdit" onclick="editReg()"> Edit Form </button>
+    <button class="btn btn-primary btn-lg btn-block" style="margin-top: 0.5rem;"  type="button" id="printForm" onClick="doPrintPDF();">Print Form (Download PDF)</button> <br>
+    <button class="btn btn-success btn-lg btn-block" id="btnFinalSubmit" style="margin-bottom: 0.5rem;" type="button" onclick="finalSubmit()">Submit to Course Adviser (Cannot be Undone)</button>
+</div>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="assets/js/printall.js"></script>
+</body>
+
+</html>

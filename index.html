@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Course Registration Form</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.js"></script>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>uniben</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
-    <h1>Hello World</h1>
-    <p>Glory is my name and I am a programmer</p>
+    <div class="container .bg-primary">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 border border-primary my-3 px-3">
+                <div>
+                    <h1 class="text-center">University Of Benin, Benin City<br></h1>
+                    <h1 class="text-center">Faculty of Engineering<br></h1>
+                    <h1 class="text-center">Online Examination Course Registration Form - 2021/2022<br></h1>
+                    <div class="row text-center mb-2">
+                        <div class="col mx-4"><a class="btn btn-success btn-lg text-center btn-block" role="button" id="startregbtn">Start Online Course Registration<br></a></div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col mx-4"><button class="btn btn-success btn-lg text-center btn-block mb-2" id="continueregbtn" type="button">Continue Registration<br></button></div>
+                    </div>
+                    <div class="row form-row" id="continueRegDiv">
+                        <div class="col-md-3 form-group"></div>
+                        <div class="col-md-6 mb-2 form-group">
+                            <form id="login_form" class="px-2"><label class="form-label">MAT . NO.</label><input class="form-control form-control-lg" type="text" id="searchMatno" placeholder="ENG.." name="mat-no" autofocus="" required=""><label class="form-label"><b><br>Password<br></b></label><input class="border rounded-0 form-control form-control-lg" type="password" id="pswSearch" placeholder="Enter Password" autofocus="" required=""><span id="toggle_pwd" class="fa fa-fw fa-eye-slash eye-icon"></span>
+                                <div class="text-center"><label class="form-label text-center">Click to load your personal data<br></label></div>
+                                <div class="row text-center">
+                                    <div class="col"><button class="btn btn-outline-success btn-lg btn-block" id="load_btn" type="submit">Load Personal Data<br></button></div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-3 form-group"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="assets/js/reg.js"></script>
 </body>
+
 </html>
